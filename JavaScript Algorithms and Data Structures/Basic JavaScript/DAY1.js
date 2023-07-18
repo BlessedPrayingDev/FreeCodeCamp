@@ -1,7 +1,11 @@
-// 이거는 한줄 주석
-/* 
-* 
-* 이거는 여러 줄 주석
-* 
-* 
-*  */
+sumHundred = (n) => {
+    if(n <= 0) {
+        return 0;
+    } else {
+
+        sumHundred(n-1);
+        return n
+    }
+}
+
+console.log(sumHundred(100));
