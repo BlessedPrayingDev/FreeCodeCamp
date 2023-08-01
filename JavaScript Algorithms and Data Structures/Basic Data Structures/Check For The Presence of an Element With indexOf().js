@@ -20,3 +20,14 @@ function quickCheck(arr, elem) {
 }
 
 console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+// Other solutions
+function quickCheck(arr, elem) {
+    return arr.indexOf(elem) != -1;
+}
+console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
+
+function quickCheck(arr, elem) {
+    return arr.indexOf(elem) >= 0 ? true : false;
+}
+console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
