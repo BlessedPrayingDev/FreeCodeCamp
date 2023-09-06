@@ -29,3 +29,31 @@ function chunkArrayInGroups(arr, size) {
 }
 
 chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4);
+
+
+// Other solution
+function chunkArrayInGroups(arr, size) {
+    let temp = [];
+    const result = [];
+
+    for (let a = 0; a < arr.length; a++) {
+        if (a % size !== size - 1) temp.push(arr[a]);
+        else {
+            temp.push(arr[a]);
+            result.push(temp);
+            temp = [];
+        }
+    }
+
+    if (temp.length !== 0) result.push(temp);
+    return result;
+}
+
+function chunkArrayInGroups(arr, size) {
+    // Break it up.
+    const newArr = [];
+    for (let i = 0; i < arr.length; i += size) {
+        newArr.push(arr.slice(i, i + size));
+    }
+    return newArr;
+}
